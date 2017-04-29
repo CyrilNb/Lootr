@@ -30,6 +30,11 @@ function talon_header_bar() {
 		<div class="main-header">
 			<div class="container">
 				<div class="row">
+                    <div class="col-md-4 menu-container">
+						<nav id="site-navigation" class="main-navigation" role="navigation">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						</nav>
+					</div>
 					<div class="col-md-4 col-sm-12 col-xs-12 branding-container">
 						<div class="menu-btn-toggle">
 						<div class="menu-btn">
@@ -40,9 +45,9 @@ function talon_header_bar() {
 						</div>
 						<?php talon_site_branding(); ?>
 					</div>
-					<div class="col-md-8 menu-container">
+                    <div class="col-md-4 menu-container">
 						<nav id="site-navigation" class="main-navigation" role="navigation">
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                            <?php wp_nav_menu( array( 'theme_location' => 'Top' ) ); ?>
 						</nav>
 					</div>
 				</div>
