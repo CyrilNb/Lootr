@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Talon
+ * @package talon-child
  */
 
 ?>
@@ -15,9 +15,15 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="container">
+		<div class="container ">
 			<div class="row">
-			<?php do_action('talon_footer'); ?>
+				<div class="col-md-10">
+					<span><a href="<?php echo esc_url( home_url( '/mentions-legales' ) ); ?>" rel="mentionslegales">Mentions Légales</a> |
+						<a href="<?php echo esc_url( home_url( '/plan-du-site' ) ); ?>" rel="plandusite">Plan du site</a></span>
+				</div>
+				<div class="col-md-2">
+					<span >Loot'R - 2017</span>
+				</div>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

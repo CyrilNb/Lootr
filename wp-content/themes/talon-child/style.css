@@ -1,4 +1,4 @@
-/*   
+/*
 Theme Name: talon-child
 Description: A Child Theme of talon
 Template: talon
@@ -21,4 +21,8 @@ Template: talon
 
 .main-navigation a:hover {
     color: #a51220;
+}
+
+.site-footer {
+    padding: 20px 0;
 }
