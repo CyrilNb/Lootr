@@ -25,10 +25,10 @@
 <div canvas="container" id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'talon' ); ?></a>
 
-	<?php //Used for talon_header_bar() 
+	<?php //Used for talon_header_bar()
 	do_action('talon_header'); ?>
 	
-	<?php //Used for talon_header_hero() 
+	<?php //Used for talon_header_hero()
 	do_action('talon_after_header'); ?>
 
 	<div id="content" class="site-content">

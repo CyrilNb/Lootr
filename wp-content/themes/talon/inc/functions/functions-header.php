@@ -63,10 +63,10 @@ add_action( 'talon_header', 'talon_header_bar', 9);
  */
 function talon_mobile_menu() {
 ?>
-	<div off-canvas="main-menu left shift">			
+	<div off-canvas="main-menu left shift">
 		<div class="mobile-branding">
 			<?php talon_site_branding(); ?>
-		</div>			
+		</div>
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'mobile-menu', 'menu_class' => 'mobile-menu' ) ); ?>
 	</div>
 <?php
@@ -99,11 +99,11 @@ function talon_header_hero() {
 		echo 	'<div class="main-slider" data-sliderspeed="' . absint($sliderspeed) . '">';
 
 			for ($c = 1; $c <= 3; $c++) {
-				
+
 				$slide_title 	 = get_theme_mod('slide_title_' . $c);
 				$slide_subtitle  = get_theme_mod('slide_subtitle_' . $c);
 				$slide_btn_title = get_theme_mod('slide_btn_title_' . $c);
-				
+
 				$slide_image 	 = get_theme_mod('slide_image_' . $c, get_template_directory_uri() . '/images/slider_' . $c . '.jpg');
 				if ( !function_exists('pll_register_string') ) {
 					$slide_title 	 = get_theme_mod('slide_title_' . $c);
@@ -137,7 +137,7 @@ function talon_header_hero() {
 					</div>
 				<?php }
 			}
-			
+
 		echo 	'</div>';
 		echo '</div>';
 
@@ -168,7 +168,7 @@ function talon_site_branding() {
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 		<?php
 		endif;
-		
+
 		$description = get_bloginfo( 'description', 'display' );
 		if ( $description || is_customize_preview() ) : ?>
 			<p class="site-description"><?php echo $description; ?></p>
