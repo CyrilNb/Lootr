@@ -345,3 +345,10 @@ function talon_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 add_action( 'tgmpa_register', 'talon_register_required_plugins' );
+
+
+/*fonction pour modifier le nombre de caractere dans un extrait d'article- a replacer au besoin*/
+function wpdocs_custom_excerpt_length( $length ) {
+	return 80;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
