@@ -110,7 +110,7 @@ class Ajax_Filter_Posts {
 			            'total' => $book_loop->max_num_pages
 			        ) );
 
-			        echo '</div>';
+			        echo '</div>';  
 			?>
 		<?php else:
 			get_template_part('content-none');
