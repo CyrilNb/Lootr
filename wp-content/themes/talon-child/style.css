@@ -26,3 +26,120 @@ Template: talon
 .site-footer {
     padding: 20px 0;
 }
+
+.hentry {
+    padding:0;
+    background-color: #fafbff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 0 0 60px;
+}
+
+/* modification filtre plugin page publication */
+#genre-filter {
+    border-top: none;
+    background-color: #161515;
+    color: #f7f7f7;
+    height: 115px;
+    line-height: 115px;
+}
+
+.btn-large {
+    margin-left: 40px;
+}
+
+#titre-filtre-publications {
+    font-weight: 900;
+    font-size: 25px;
+    border-right: 1px solid #f7f7f7;
+    padding-left: 32px;
+    padding-right: 32px;
+    vertical-align: middle;
+}
+
+#filtre-publications {
+    vertical-align: middle;
+}
+/* fin modification filtre plugin page publication */
+
+
+.post-item .entry-thumb {
+    border-radius: 0;
+    width: 39%;
+}
+
+.has-post-thumbnail.post-item .post-content {
+    width: 58%;
+}
+
+.post-item .post-content .entry-title {
+    margin-top: -4px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.post-content .entry-header {
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.post-content .entry-header .cat-links {
+    position: absolute;
+    margin-left: -477px;
+    margin-top: -15px;
+    color: #f7f7f7;
+    background-color: #161515;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.post-content .entry-header .cat-links a{
+    color: #f7f7f7;
+}
+
+.post-content .entry-header .posted-on {
+    position: absolute;
+    margin-left: -477px;
+    margin-top: 192px;
+    color: #f7f7f7;
+    background-color: #161515;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.post-content .entry-header .meta-dash {
+    display: none;
+}
+
+.post-content .entry-content p {
+    line-height: 1.5;
+}
+
+.cta-page-publications {
+    color: #a51220;
+    text-transform: uppercase;
+    font-weight: 900;
+    float: right;
+    border: 2px solid #a51220;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.cta-page-publications:hover {
+    color: #f7f7f7;
+    background-color: #a51220;
+}
+
+.titre-article-publications {
+    border-bottom: 2px solid #161515;
+    margin-bottom: 35px;
+}
+.titre-article-publications h2 {
+    margin-bottom: -16px;
+    background-color: #fafbff;
+    width: 185px;
+    font-weight: 900;
+    font-size: 26px;
+    text-transform: uppercase;
+}
