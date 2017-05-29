@@ -2,12 +2,18 @@
 Theme Name: talon-child
 Description: A Child Theme of talon
 Template: talon
+test arnaud
 */
 
+/*-------------------- Header --------------------*/
 #header {
     padding-top: 10px;
 }
 
+html body div.container div.menu-container div.menu-menu-principal-container { text-align: left; }
+html body div.container div.menu-container:last-child { padding-right: 10px; }
+
+/*-------------------- Body --------------------*/
 .main-header {
     background-color: #161515;
     padding: 0px;
@@ -23,9 +29,6 @@ Template: talon
     color: #a51220;
 }
 
-.site-footer {
-    padding: 20px 0;
-}
 
 .hentry {
     padding:0;
@@ -143,3 +146,56 @@ Template: talon
     font-size: 26px;
     text-transform: uppercase;
 }
+/*-------------------- Page single --------------------*/
+html body div#primary main#main article header.entry-header h1.entry-title {
+    color: #171414;
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0px;
+    float: left;
+    text-transform: uppercase; }
+
+html body article header.entry-header #trait_titre {
+    float: left;
+    margin: 15px 0 0 20px;
+    min-width: 200px;
+    border-top: 2px solid #171414; }
+
+html body header.entry-header .entry-meta .byline, html body header.entry-header .entry-meta .meta-dash, html body header.entry-header .entry-meta .posted-on{ display:none; }
+html body header.entry-header .entry-meta {
+    float: right;
+    margin: 2px 0 0 0; }
+
+html body header.entry-header .entry-meta .cat-links {
+    padding: 3px 6px;
+    background: #171414;
+    color: #fbfbed; }
+
+html body header.entry-header .entry-meta .cat-links a { color: #fbfbed; }
+
+html body article .entry-content {
+    padding: 20px 0 0 0;
+    clear: both; }
+
+
+/*-------------------- Footer --------------------*/
+html body .site-footer {
+    background: #171414;
+    padding: 0px; }
+
+html body nav#footer-navigation {margin:inherit;}
+
+html #footer-menu ul li {
+    float: left;
+    margin: 30px 5px;
+    border-right: 2px solid #898881;
+    padding-right: 15px; }
+html #footer-menu ul li:last-child {
+    border:inherit;
+    padding:inherit; }
+
+html #footer-menu ul.footer_right  { text-align: right; }
+html #footer-menu ul.footer_right li { float:inherit; }
+
+html #footer-menu ul li a { color:#ffffff; }
+html #footer-menu ul li a:hover { color:#a51220; }
