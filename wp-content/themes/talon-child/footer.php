@@ -14,15 +14,19 @@
 		</div>
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="footer-menu" class="site-footer" role="contentinfo">
 		<div class="container ">
 			<div class="row">
 				<div class="col-md-10">
-					<span><a href="<?php echo esc_url( home_url( '/mentions-legales' ) ); ?>" rel="mentionslegales">Mentions Légales</a> |
-						<a href="<?php echo esc_url( home_url( '/plan-du-site' ) ); ?>" rel="plandusite">Plan du site</a></span>
+					<ul>
+						<li><a href="<?php echo esc_url( home_url( '/mentions-legales' ) ); ?>" rel="mentionslegales" title="Mentions légales">Mentions Légales</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/plan-du-site' ) ); ?>" rel="plandusite" title="Plan du site">Plan du site</a></li>
+					</ul>
 				</div>
 				<div class="col-md-2">
-					<span >Loot'R - 2017</span>
+					<ul class="footer_right">
+						<li>©Loot'R - 2017</li>
+					</ul>
 				</div>
 			</div>
 		</div>
