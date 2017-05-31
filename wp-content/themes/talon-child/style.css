@@ -147,7 +147,7 @@ html body div.container div.menu-container:last-child { padding-right: 10px; }
     text-transform: uppercase;
 }
 /*-------------------- Page single --------------------*/
-html body div#primary main#main article header.entry-header h1.entry-title {
+html body div#primary main#main .post header.entry-header h1.entry-title {
     color: #171414;
     font-size: 24px;
     font-weight: 900;
@@ -155,14 +155,14 @@ html body div#primary main#main article header.entry-header h1.entry-title {
     float: left;
     text-transform: uppercase; }
 
-html body article header.entry-header #trait_titre {
+html body .post header.entry-header #trait_titre {
     float: left;
     margin: 15px 0 0 20px;
     min-width: 200px;
     border-top: 2px solid #171414; }
 
-html body header.entry-header .entry-meta .byline, html body header.entry-header .entry-meta .meta-dash, html body header.entry-header .entry-meta .posted-on{ display:none; }
-html body header.entry-header .entry-meta {
+html body .post header.entry-header .entry-meta .byline, html body .post header.entry-header .entry-meta .meta-dash, html body .post header.entry-header .entry-meta .posted-on{ display:none; }
+html body .post header.entry-header .entry-meta {
     float: right;
     margin: 2px 0 0 0; }
 
@@ -171,9 +171,9 @@ html body header.entry-header .entry-meta .cat-links {
     background: #171414;
     color: #fbfbed; }
 
-html body header.entry-header .entry-meta .cat-links a { color: #fbfbed; }
+html body .post header.entry-header .entry-meta .cat-links a { color: #fbfbed; }
 
-html body article .entry-content {
+html body .post .entry-content {
     padding: 20px 0 0 0;
     clear: both; }
 
