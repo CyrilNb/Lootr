@@ -65,7 +65,7 @@ html body div.container div.menu-container:last-child { padding-right: 10px; }
 }
 /* fin modification filtre plugin page publication */
 
-
+/* page publications */
 .post-item .entry-thumb {
     border-radius: 0;
     width: 39%;
@@ -146,6 +146,100 @@ html body div.container div.menu-container:last-child { padding-right: 10px; }
     font-size: 26px;
     text-transform: uppercase;
 }
+
+/* fin page publications */
+
+/* Page accueil */
+.container-accueil {
+}
+
+.accueil-dossier {
+    background-color: #161515;
+    background-image: url(img/pattern-background.png);
+    opacity: 0,75;
+}
+
+.accueil-dossier ul{
+    padding-left: 0px;
+}
+
+.accueil-dossier-texte {
+    color: #f7f7f7;
+}
+
+.accueil-dossier-texte a{
+    color: #f7f7f7;
+    font-weight: 900;
+    font-size: 30px!important;
+    text-transform: uppercase;
+    background-color: #161515;
+    padding-right: 20px;
+}
+
+.accueil-dossier-texte .cat-post-excerpt-more {
+    color: #a51220;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px!important;
+    float: right;
+    border: 2px solid #a51220;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+.accueil-dossier-texte .cat-post-excerpt-more:hover {
+    color: #f7f7f7;
+    background-color: #a51220;
+}
+
+.accueil-dossier-texte ul{
+    margin-top: 0px;
+}
+
+.accueil-dossier-texte p {
+    margin-bottom: 15px;
+    margin-top: -27px;
+    border-top: 2px solid #f7f7f7;
+    padding-top: 20px;
+}
+
+.accueil-publications {
+    margin-top: 40px;
+}
+
+.accueil-publications .widget-title {
+    text-align: left;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    width: 285px;
+    margin-top: -20px;
+    font-family: "Open Sans";
+    font-weight: 900;
+}
+
+.accueil-publications .home-blog-section {
+    border-top: 2px solid #161515;
+}
+
+.accueil-publications .widget-title {
+    text-align: left;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    width: 285px;
+    margin-top: -20px;
+}
+
+.accueil-publications .home-blog-img a {
+    width: 100%;
+    float: left;
+}
+.accueil-publictions .wp-post-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* fin Page accueil */
+
 /*-------------------- Page single --------------------*/
 html body div#primary main#main .post header.entry-header h1.entry-title {
     color: #171414;
