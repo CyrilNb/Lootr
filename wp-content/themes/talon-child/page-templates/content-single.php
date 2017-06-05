@@ -1,23 +1,21 @@
 <?php
 /**
- * Template part for displaying posts.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package Talon
+ * Created by PhpStorm.
+ * User: Unggoy
+ * Date: 05/06/2017
+ * Time: 16:17
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
     <header class="entry-header">
         <?php
-        the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-        <div id="trait_titre"></div>
-        <?php if ( 'post' === get_post_type() && get_theme_mod( 'hide_meta_singles' ) != 1) : ?>
+        the_title( '<h1 class="entry-title">', '</h1>' );
+        if ( 'post' === get_post_type() && get_theme_mod( 'hide_meta_singles' ) != 1) : ?>
             <div class="entry-meta">
                 <?php talon_posted_on(); ?>
-                <?php talon_entry_footer(); ?> <!-- Arnaud : Remonter les tags sur la vue detail des articles (du footer au header)-->
             </div><!-- .entry-meta -->
             <?php
         endif; ?>
@@ -45,6 +43,6 @@
     </div><!-- .entry-content -->
 
     <footer class="entry-footer">
-        <?php /*talon_entry_footer(); */ ?> <!-- Retrait des tags en bas de page -->
+        <?php talon_entry_footer(); ?>
     </footer><!-- .entry-footer -->
 </article><!-- #post-## -->
