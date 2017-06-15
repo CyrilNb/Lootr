@@ -8,7 +8,28 @@ get_header(); ?>
 	<div id="primary" class="content-area fullwidth">
 		<main id="main" class="site-main" role="main">
 
-			<?php echo do_shortcode( '[tags]' );
+			<?php
+			$args = array(
+				'post_type' => 'post',
+				'posts_per_page' => 10,
+			);
+
+			$query = new WP_Query( $args );
+
+			$tax = 'post_tag';
+			$terms = get_terms( $tax );
+			$count = count( $terms );
+
+			if ( $count > 0 ): ?>
+				<div class="post-tags">
+					<?php
+					foreach ( $terms as $term ) {
+						$term_link = get_term_link( $term, $tax );
+						echo '<a href="' . $term_link . '" class="tax-filter" title="' . $term->slug . '">' . $term->name . '</a> ';
+					} ?>
+				</div>
+
+			<?php endif;
 
 			if ( $query->have_posts() ): ?>
 				<div class="tagged-posts">
