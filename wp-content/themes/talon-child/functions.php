@@ -11,7 +11,7 @@ register_nav_menus( array(
     ) );
 
 
-function dobson_embed_twitch($atts) {
+/*function dobson_embed_twitch($atts) {
   extract(shortcode_atts(array(
     'username' => "Invalid Username",
     'width' => "620",
@@ -34,4 +34,25 @@ function dobson_embed_twitch($atts) {
   }
 }
 
-add_shortcode('embedTwitch', 'dobson_embed_twitch');
+add_shortcode('embedTwitch', 'dobson_embed_twitch');*/
+
+function tags_filter() {
+  $tax = 'post_tag';
+  $terms = get_terms( $tax );
+  $count = count( $terms );
+
+  if ( $count > 0 ): ?>
+    <div class="post-tags">
+      <?php
+      foreach ( $terms as $term ) {
+        $term_link = get_term_link( $term, $tax );
+        echo '<a href="' . $term_link . '" class="tax-filter" title="' . $term->slug . '">' . $term->name . '</a> ';
+      } ?>
+    </div>
+  <?php endif;
+}
+add_shortcode('tags', 'tags_filter');
+
+
+
+?>

@@ -8,10 +8,23 @@ get_header(); ?>
 	<div id="primary" class="content-area fullwidth">
 		<main id="main" class="site-main" role="main">
 
-			<?php
-			$new_posts_filter = new Ajax_Filter_Posts();
-			echo $new_posts_filter->get_genre_filters('post', 'category');
-			?>
+			<?php echo do_shortcode( '[tags]' );
+
+			if ( $query->have_posts() ): ?>
+				<div class="tagged-posts">
+					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<?php the_excerpt(); ?>
+
+					<?php endwhile; ?>
+				</div>
+
+			<?php else: ?>
+				<div class="tagged-posts">
+					<h2>No posts found</h2>
+				</div>
+			<?php endif; ?>
 
 
 		</main><!-- #main -->
