@@ -13,7 +13,7 @@
     <header class="entry-header">
         <?php
         the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-        <div id="trait_titre"></div>
+        <div class="trait_titre"></div>
         <?php if ( 'post' === get_post_type() && get_theme_mod( 'hide_meta_singles' ) != 1) : ?>
             <div class="entry-meta">
                 <?php talon_posted_on(); ?>
@@ -43,6 +43,15 @@
         ) );
         ?>
     </div><!-- .entry-content -->
+
+    <div id="suggestions_posts">
+        <div>
+            <div class="titre_suggestions">Suggestions</div>
+            <div class="trait_titre"></div>
+        </div>
+        <?php echo do_shortcode("[pt_view id=8f20d8dptl]"); ?>
+    </div>
+
 
     <footer class="entry-footer">
         <?php /*talon_entry_footer(); */ ?> <!-- Retrait des tags en bas de page -->

@@ -266,15 +266,17 @@ html body div#primary main#main .post header.entry-header h1.entry-title {
     font-size: 24px;
     font-weight: 900;
     margin: 0px;
-    float: left;
+    padding: 0 30px 0 0;
+    background-color: #fafbff;
+    position: absolute;
     text-transform: uppercase; }
 
-html body .post header.entry-header #trait_titre {
+html body .post header.entry-header .trait_titre {
     border-top: 2px solid #171414;
     float: left;
-    margin: 15px 0 0 20px;
+    margin: 15px 0 0 0px;
     min-width: 200px;
-    width: 810px; }
+    width: 100%; }
 
 html body .post header.entry-header .entry-meta .byline, html body .post header.entry-header .entry-meta .meta-dash, html body .post header.entry-header .entry-meta .posted-on{ display:none; }
 html body .post header.entry-header .entry-meta {
@@ -318,6 +320,44 @@ html body article.post .entry-content div.image_illustration div.image_group spa
     display: block;
     font-size: 14px;
     text-align: center; }
+
+html body nav.post-navigation { display: none; }
+
+/*Suggestions*/
+html body div#suggestions_posts .titre_suggestions {
+    color: #171414;
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0px;
+    padding: 0 30px 0 0;
+    background-color: #fafbff;
+    text-transform: uppercase; }
+
+html body div#suggestions_posts .trait_titre {
+    border-top: 2px solid #171414;
+    float: left;
+    position: relative;
+    top: -37px;
+    margin: 15px 0 0 0px;
+    min-width: 200px;
+    width: 100%; }
+
+html body div h4.pt-cv-title a {
+    color: #171414;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0 30px 0 0;
+    text-transform: uppercase; }
+
+html body div#suggestions_posts a.btn-success {
+    background-color: white;
+    border: 2px solid red;
+    color: red; }
+
+html body div#suggestions_posts a.btn-success:hover {
+    background-color: red;
+    border: 2px solid white;
+    color: white; }
 
 /*-------------------- Footer --------------------*/
 html body .site-footer {
