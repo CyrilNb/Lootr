@@ -42,7 +42,7 @@ function talon_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'talon-home-small', 200);
-	add_image_size( 'talon-home-large', 280, 280, true );
+	add_image_size( 'talon-home-large', 280, 280, false );
 	add_image_size( 'talon-blog-image', 690 );
 
 	// This theme uses wp_nav_menu() in two locations.

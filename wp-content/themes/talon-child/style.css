@@ -226,18 +226,36 @@ html body #genre-filter {
 .accueil-publications .widget-title {
     text-align: left;
     margin-bottom: 20px;
-    background-color: #f7f7f7;
+    background-color: #fafbff;
     width: 285px;
     margin-top: -20px;
 }
 
 .accueil-publications .home-blog-img a {
-    width: 100%;
-    float: left;
+     width: 100%;
+     float: left;
 }
-.accueil-publictions .wp-post-image {
-    max-width: 100%;
-    max-height: 100%;
+
+.accueil-publications .home-blog-img img {
+    width: 100%;
+    max-height: 280px;
+}
+
+
+
+.page-accueil .siteorigin-panels-stretch {
+    padding-top: 0px!important;
+    margin-top: -60px!important;
+    z-index: 0;
+}
+
+.page-accueil .slider-accueil h1{
+    font-family: Arial;
+    color: #fafbff!important;
+}
+.page-accueil .slider-accueil p{
+    font-family: Arial;
+    color: #fafbff!important;
 }
 
 /* fin Page accueil */
