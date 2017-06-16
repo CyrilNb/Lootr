@@ -29,30 +29,44 @@ get_header(); ?>
 						$term_link = get_term_link( $term, $tax );
 						echo '<a href="' . $term_link . '" class="tax-filter btn btn-large" title="' . $term->slug . '">' . $term->name . '</a> ';
 						} ?>
-					<a class="clear-all btn btn-large">Tous</a>
 					</span>
 				</div>
 
 			<?php endif;
 			if ( $query->have_posts() ): ?>
+
 				<div class="titre-article-publications">
 					<h2>Les Articles</h2>
 				</div>
 				<div class="tagged-posts">
 					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-						<article class="hentry">
-							<div class="entry-thumb"></div>
-								<div class="post-content">
-									<header class="entry-header">
-									<h4 class="entry-title">
-										<a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
-									</h4>
-									</header>
-									<div class="entry-content">
-										<?php the_excerpt(); ?>
-										<a class="cta-page-publications" href="<?php the_permalink(); ?>" >Lire la publication </a>
-									</div>
+
+						<article class="hentry post-item" id="post-<?php the_ID() ?>">
+
+							<div class="entry-thumb">
+								<?php the_post_thumbnail(); ?>
+							</div>
+							<div class="post-content">
+								<header class="entry-header">
+								<h4 class="entry-title">
+									<a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
+									<span><?php the_date()?></span>
+
+								</h4>
+								</header>
+								<div class="entry-content">
+									<?php the_excerpt(); ?>
+									<?php
+									$posttags = get_the_tags();
+									if ($posttags) {
+										foreach($posttags as $tag) {
+											echo $tag->name . ' ';
+										}
+									}
+									?>
+									<a class="cta-page-publications" href="<?php the_permalink(); ?>" >Lire la publication </a>
 								</div>
+							</div>
 						</article>
 					<?php endwhile; ?>
 				</div>
