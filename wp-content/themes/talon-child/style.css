@@ -324,11 +324,13 @@ html body article.post .entry-content div.image_illustration div.image_group spa
 html body nav.post-navigation { display: none; }
 
 /*Suggestions*/
+html body main#main article { margin: 0px; }
+html body div#suggestions_posts {clear: both; }
 html body div#suggestions_posts .titre_suggestions {
     color: #171414;
     font-size: 24px;
     font-weight: 900;
-    margin: 0px;
+    position: absolute;
     padding: 0 30px 0 0;
     background-color: #fafbff;
     text-transform: uppercase; }
@@ -336,28 +338,79 @@ html body div#suggestions_posts .titre_suggestions {
 html body div#suggestions_posts .trait_titre {
     border-top: 2px solid #171414;
     float: left;
-    position: relative;
-    top: -37px;
-    margin: 15px 0 0 0px;
-    min-width: 200px;
+    margin: 23px 0 0 0px;
+    min-height: 30px;
     width: 100%; }
 
-html body div h4.pt-cv-title a {
+html body div .pt-cv-wrapper h4.pt-cv-title a {
     color: #171414;
     font-size: 18px;
     margin: 0px;
     padding: 0 30px 0 0;
     text-transform: uppercase; }
 
-html body div#suggestions_posts a.btn-success {
-    background-color: white;
-    border: 2px solid red;
-    color: red; }
+html body div .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail {
+    display: block;
+    float: left;
+    margin: 0 30px 0 0;
+    overflow: hidden;
+    height: 185px;
+    width: 290px; }
 
-html body div#suggestions_posts a.btn-success:hover {
-    background-color: red;
-    border: 2px solid white;
-    color: white; }
+html body div .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail img {
+    min-height: 185px;
+    min-width: 290px; }
+
+html body div .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail:hover img {
+    min-height: 235px;
+    min-width: 340px; }
+
+html body div .pt-cv-wrapper .pt-cv-content {
+    margin: 0;
+    font-weight: lighter;
+    line-height: normal; }
+
+html body div#suggestions_posts .pt-cv-wrapper a.btn-success {
+    background-color: #fff;
+    border: 2px solid #a51220;
+    border-radius: inherit;
+    color: #a51220;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 235px; }
+
+html body div#suggestions_posts .pt-cv-wrapper a.btn-success:hover {
+    background-color: #a51220;
+    border: 2px solid #a51220;
+    color: #fff; }
+
+html body div#suggestions_posts .pt-cv-meta-fields span.entry-date {
+    border-radius: 0;
+    background: #171414;
+    color: #fbfbed;
+    padding: 7px;
+    margin: 0 0 0 5px;
+    position: relative;
+    top: -60px; }
+
+html body div#suggestions_posts .pt-cv-meta-fields {
+    color: #fff; /* Astuce degeulase... */
+    margin: 0;
+    height: 1px; }
+
+html body div#suggestions_posts .pt-cv-meta-fields span.terms {
+    left: -103px;
+    top: -130px;
+    position: relative; }
+
+html body div#suggestions_posts .pt-cv-meta-fields span.terms a {
+    border-radius: 0;
+    background: #171414;
+    color: #fbfbed;
+    padding: 7px;
+    margin: 0 0 0 5px;
+    position: relative;
+    top: -69px; }
 
 /*-------------------- Footer --------------------*/
 html body .site-footer {
