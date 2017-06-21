@@ -359,11 +359,27 @@ html body div .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail {
 
 html body div .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail img {
     min-height: 185px;
-    min-width: 290px; }
+    min-width: 290px;
+    height: 185px;
+    width: 290px;
+    transition: max-height 1s;
+    transition: max-width 1s;
+    transition: min-height 1s;
+    transition: min-width 1s;
+    transition: height 1s;
+    transition: width 1s; }
 
+/* effet de hover sur les images */
 html body div .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail:hover img {
-    min-height: 235px;
-    min-width: 340px; }
+    max-width: 340px !important;
+    min-width: 340px !important;
+    max-height: 235px !important;
+    min-height: 235px !important;
+    height: 235px !important;
+    width: 340px !important;
+    position: relative;
+    left: -25px;
+    top: -25px; }
 
 html body div .pt-cv-wrapper .pt-cv-content {
     margin: 0;
