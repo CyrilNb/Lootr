@@ -2,7 +2,6 @@
 Theme Name: talon-child
 Description: A Child Theme of talon
 Template: talon
-test arnaud second
 */
 
 /*-------------------- Header --------------------*/
@@ -19,20 +18,18 @@ html body div.container div.menu-container div.menu-menu-principal-container { t
 html body div.container div.menu-container:last-child { padding-right: 10px; }
 
 /*-------------------- Body --------------------*/
+body { font-family:"Arial Narrow",Arial,sans-serif; }
+
 .main-header {
     background-color: #161515;
-    padding: 0px;
-}
+    padding: 0px; }
 
 .site-branding {
     height: 60px;
     text-align: center;
-    padding-top: 16px;
-}
+    padding-top: 16px; }
 
-.main-navigation a:hover {
-    color: #a51220;
-}
+.main-navigation a:hover { color: #a51220; }
 
 
 
@@ -391,7 +388,11 @@ html body nav.post-navigation { display: none; }
 
 /*Suggestions*/
 html body main#main article { margin: 0px; }
-html body article div#suggestions_posts {clear: both; }
+
+html body article div#suggestions_posts {
+    padding-top: 20px;
+    clear: both; }
+
 html body article div#suggestions_posts .titre_suggestions {
     color: #171414;
     font-size: 24px;
