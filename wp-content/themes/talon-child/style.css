@@ -391,8 +391,8 @@ html body nav.post-navigation { display: none; }
 
 /*Suggestions*/
 html body main#main article { margin: 0px; }
-html body div#suggestions_posts {clear: both; }
-html body div#suggestions_posts .titre_suggestions {
+html body article div#suggestions_posts {clear: both; }
+html body article div#suggestions_posts .titre_suggestions {
     color: #171414;
     font-size: 24px;
     font-weight: 900;
@@ -401,21 +401,21 @@ html body div#suggestions_posts .titre_suggestions {
     background-color: #fafbff;
     text-transform: uppercase; }
 
-html body div#suggestions_posts .trait_titre {
+html body article div#suggestions_posts .trait_titre {
     border-top: 2px solid #171414;
     float: left;
     margin: 23px 0 0 0px;
     min-height: 30px;
     width: 100%; }
 
-html body div .pt-cv-wrapper h4.pt-cv-title a {
+html body article div#suggestions_posts .pt-cv-wrapper h4.pt-cv-title a {
     color: #171414;
     font-size: 18px;
     margin: 0px;
     padding: 0 30px 0 0;
     text-transform: uppercase; }
 
-html body div .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail {
+html body article div#suggestions_posts .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail {
     display: block;
     float: left;
     margin: 0 30px 0 0;
@@ -423,36 +423,24 @@ html body div .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail {
     height: 185px;
     width: 290px; }
 
-html body div .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail img {
-    min-height: 185px;
+html body article div#suggestions_posts .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail img {
     min-width: 290px;
-    height: 185px;
+    max-width: 290px;
+    min-height: 185px;
+    max-height: 185px;
     width: 290px;
-    transition: max-height 1s;
-    transition: max-width 1s;
-    transition: min-height 1s;
-    transition: min-width 1s;
-    transition: height 1s;
-    transition: width 1s; }
+    height: 185px;
+    transition: all .2s ease-in-out; }
 
 /* effet de hover sur les images */
-html body div .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail:hover img {
-    max-width: 340px !important;
-    min-width: 340px !important;
-    max-height: 235px !important;
-    min-height: 235px !important;
-    height: 235px !important;
-    width: 340px !important;
-    position: relative;
-    left: -25px;
-    top: -25px; }
+html body article div#suggestions_posts .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail:hover img { transform: scale(1.1); }
 
-html body div .pt-cv-wrapper .pt-cv-content {
+html body article div#suggestions_posts .pt-cv-wrapper .pt-cv-content {
     margin: 0;
     font-weight: lighter;
     line-height: normal; }
 
-html body div#suggestions_posts .pt-cv-wrapper a.btn-success {
+html body article div#suggestions_posts .pt-cv-wrapper a.btn-success {
     background-color: #fff;
     border: 2px solid #a51220;
     border-radius: inherit;
@@ -461,38 +449,38 @@ html body div#suggestions_posts .pt-cv-wrapper a.btn-success {
     text-transform: uppercase;
     width: 235px; }
 
-html body div#suggestions_posts .pt-cv-wrapper a.btn-success:hover {
+html body article div#suggestions_posts .pt-cv-wrapper a.btn-success:hover {
     background-color: #a51220;
     border: 2px solid #a51220;
     color: #fff; }
 
-html body div#suggestions_posts .pt-cv-meta-fields span.entry-date {
+html body article div#suggestions_posts .pt-cv-meta-fields span.entry-date {
+    background: #171414 none repeat scroll 0 0;
     border-radius: 0;
-    background: #171414;
     color: #fbfbed;
     padding: 7px;
-    margin: 0 0 0 5px;
-    position: relative;
-    top: -60px; }
+    position: absolute;
+    left: 20px;
+    top: 141px; }
 
-html body div#suggestions_posts .pt-cv-meta-fields {
-    color: #fff; /* Astuce degeulase... */
+html body article div#suggestions_posts .pt-cv-meta-fields {
+    color: #fff; /* Astuce degeulasse... */
     margin: 0;
     height: 1px; }
 
-html body div#suggestions_posts .pt-cv-meta-fields span.terms {
-    left: -103px;
-    top: -130px;
-    position: relative; }
+html body article div#suggestions_posts .pt-cv-meta-fields span.terms {
+    position: absolute;
+    left: 12px;
+    top: 10px; }
 
-html body div#suggestions_posts .pt-cv-meta-fields span.terms a {
+html body article div#suggestions_posts .pt-cv-meta-fields span.terms a {
     border-radius: 0;
     background: #171414;
     color: #fbfbed;
+    position: relative; /* triche pour les virgules */
+    right: -3px;
     padding: 7px;
-    margin: 0 0 0 5px;
-    position: relative;
-    top: -69px; }
+    margin: 0 0 0 5px; }
 
 
 /*-------------------- ML ------------------------*/
