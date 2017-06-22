@@ -10,6 +10,11 @@ test arnaud second
     padding-top: 10px;
 }
 
+.sticky-wrapper {
+    position: sticky;
+    z-index: 99;
+}
+
 html body div.container div.menu-container div.menu-menu-principal-container { text-align: left; }
 html body div.container div.menu-container:last-child { padding-right: 10px; }
 
@@ -44,7 +49,7 @@ html body div.container div.menu-container:last-child { padding-right: 10px; }
 html body #genre-filter {
     border-top: none;
     background-color: #161515;
-    color: #f7f7f7;
+    color: #fafbff;
     height: 115px;
     line-height: 115px;
 }
@@ -56,7 +61,7 @@ html body #genre-filter {
 #titre-filtre-publications {
     font-weight: 900;
     font-size: 25px;
-    border-right: 1px solid #f7f7f7;
+    border-right: 1px solid #fafbff;
     padding-left: 32px;
     padding-right: 32px;
     vertical-align: middle;
@@ -92,21 +97,21 @@ html body #genre-filter {
     position: absolute;
     margin-left: -477px;
     margin-top: -15px;
-    color: #f7f7f7;
+    color: #fafbff;
     background-color: #161515;
     padding-left: 4px;
     padding-right: 4px;
 }
 
 .post-content .entry-header .cat-links a{
-    color: #f7f7f7;
+    color: #fafbff;
 }
 
 .post-content .entry-header .posted-on {
     position: absolute;
     margin-left: -477px;
     margin-top: 192px;
-    color: #f7f7f7;
+    color: #fafbff;
     background-color: #161515;
     padding-left: 4px;
     padding-right: 4px;
@@ -132,7 +137,7 @@ html body #genre-filter {
     padding-bottom: 5px;
 }
 .cta-page-publications:hover {
-    color: #f7f7f7;
+    color: #fafbff;
     background-color: #a51220;
 }
 
@@ -161,16 +166,20 @@ html body #genre-filter {
     opacity: 0,75;
 }
 
+.page-accueil #pg-24-1 {
+    margin-top: 20px;
+}
+
 .accueil-dossier ul{
     padding-left: 0px;
 }
 
 .accueil-dossier-texte {
-    color: #f7f7f7;
+    color: #fafbff;
 }
 
 .accueil-dossier-texte a{
-    color: #f7f7f7;
+    color: #fafbff;
     font-weight: 900;
     font-size: 30px!important;
     text-transform: uppercase;
@@ -190,7 +199,7 @@ html body #genre-filter {
     margin-top: 30px;
 }
 .accueil-dossier-texte .cat-post-excerpt-more:hover {
-    color: #f7f7f7;
+    color: #fafbff;
     background-color: #a51220;
 }
 
@@ -201,34 +210,29 @@ html body #genre-filter {
 .accueil-dossier-texte p {
     margin-bottom: 15px;
     margin-top: -27px;
-    border-top: 2px solid #f7f7f7;
+    border-top: 2px solid #fafbff;
     padding-top: 20px;
 }
 
 .accueil-publications {
-    margin-top: 40px;
+    margin-top: 50px!important;
+    margin-bottom: 103px!important;
 }
 
 .accueil-publications .widget-title {
+    position: relative;
     text-align: left;
-    margin-bottom: 20px;
-    background-color: #f7f7f7;
+    margin-bottom: -18px;
+    background-color: #fafbff;
     width: 285px;
     margin-top: -20px;
     font-family: "Open Sans";
     font-weight: 900;
 }
 
-.accueil-publications .home-blog-section {
+.accueil-publications .textwidget {
     border-top: 2px solid #161515;
-}
-
-.accueil-publications .widget-title {
-    text-align: left;
-    margin-bottom: 20px;
-    background-color: #fafbff;
-    width: 285px;
-    margin-top: -20px;
+    padding-top: 40px;
 }
 
 .accueil-publications .home-blog-img a {
@@ -240,7 +244,6 @@ html body #genre-filter {
     width: 100%;
     max-height: 280px;
 }
-
 
 
 .page-accueil .siteorigin-panels-stretch {
@@ -258,7 +261,70 @@ html body #genre-filter {
     color: #fafbff!important;
 }
 
-/* fin Page accueil */
+.page-accueil .pt-cv-ifield a {
+    margin: 0 auto!important;
+    width: 100%!important;
+}
+.page-accueil .pt-cv-ifield a img{
+    width: 100%!important;
+}
+.page-accueil .pt-cv-ifield h4 {
+    float: left;
+}
+.page-accueil .pt-cv-content {
+    float: left;
+    height: 90px;
+}
+
+.page-accueil .pt-cv-content a {
+    display: none;
+}
+.page-accueil .pt-cv-title {
+    margin-top: 14px!important;
+}
+
+.page-accueil .pt-cv-meta-fields {
+    color: #FAFBFF;
+}
+
+.page-accueil .pt-cv-meta-fields .entry-date {
+    position: absolute ;
+    top: 148px;
+    left: 25px;
+    background: #161515;
+    padding: 2px 5px 2px 5px;
+    color: #FAFBFF;
+}
+
+.page-accueil .pt-cv-meta-fields .terms {
+    color: #FAFBFF;
+    position: relative;
+}
+
+.page-accueil .pt-cv-meta-fields .terms a {
+    position: relative;
+    top: -310px;
+    float: left;
+    display: inline-block;
+    width: 80px!important;
+    text-align: center;
+    background-color: #161515;
+    color: #FAFBFF;
+    margin-left: 11px!important;
+}
+
+.button-publication-accueil a {
+    border-radius: 0!important;
+    color: #a51220!important;
+    border: 2px solid #a51220!important;
+    background-color: #FAFBFF!important;
+}
+.button-publication-accueil a:hover {
+color: #fafbff!important;
+background-color: #a51220!important;
+}
+
+/*------------------- fin Page accueil -----------------*/
 
 /*-------------------- Page single --------------------*/
 html body div#primary main#main .post header.entry-header h1.entry-title {
@@ -427,6 +493,47 @@ html body div#suggestions_posts .pt-cv-meta-fields span.terms a {
     margin: 0 0 0 5px;
     position: relative;
     top: -69px; }
+
+
+/*-------------------- ML ------------------------*/
+.page-ML .widget-title {
+    position: relative;
+    text-align: left;
+    margin-bottom: -18px;
+    background-color: #fafbff;
+    width: 345px;
+    margin-top: -20px;
+    font-family: "Open Sans";
+    font-weight: 900;
+}
+
+.page-ML .textwidget {
+    border-top: 2px solid #161515;
+    padding-top: 40px;
+}
+
+.ML-hebergement .widget-title {
+    position: relative;
+    text-align: left;
+    margin-bottom: -18px;
+    background-color: #fafbff;
+    width: 234px;
+    margin-top: -20px;
+    font-family: "Open Sans";
+    font-weight: 900;
+}
+
+.ML-copyright .widget-title {
+    position: relative;
+    text-align: left;
+    margin-bottom: -18px;
+    background-color: #fafbff;
+    width: 182px;
+    margin-top: -20px;
+    font-family: "Open Sans";
+    font-weight: 900;
+}
+
 
 /*-------------------- Footer --------------------*/
 html body .site-footer {
