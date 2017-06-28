@@ -15,6 +15,9 @@ get_header(); ?>
 			);
 
 			$query = new WP_Query( $args );
+			//$query = new WP_Query( array( 'tag' => 'astuce' ) );
+			//$query = new WP_Query( array( 'tag' => 'jeux-video+astuce' ) ); //both
+			//$query = new WP_Query( array( 'tag' => 'esport,astuce' ) ); //either
 
 			$tax = 'post_tag';
 			$terms = get_terms( $tax );
@@ -29,6 +32,7 @@ get_header(); ?>
 						$term_link = get_term_link( $term, $tax );
 						echo '<a href="' . $term_link . '" class="tax-filter btn btn-large" title="' . $term->slug . '">' . $term->name . '</a> ';
 						} ?>
+					<a
 					</span>
 				</div>
 

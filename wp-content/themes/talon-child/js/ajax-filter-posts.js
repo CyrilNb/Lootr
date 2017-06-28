@@ -27,6 +27,7 @@ jQuery(document).ready(function($) {
             success: function( data, textStatus, XMLHttpRequest ) {
                 $('.tagged-posts').html( data );
                 $('.tagged-posts').fadeIn();
+                console.log( "test" );
                 console.log( textStatus );
                 console.log( XMLHttpRequest );
             },
@@ -34,7 +35,7 @@ jQuery(document).ready(function($) {
                 console.log( MLHttpRequest );
                 console.log( "textStatus: " + textStatus );
                 console.log( "errorThrown: " + errorThrown );
-                $('.tagged-posts').html( 'No posts found' );
+                $('.tagged-posts').html( ' No posts found ' );
                 $('.tagged-posts').fadeIn();
             }
         })
