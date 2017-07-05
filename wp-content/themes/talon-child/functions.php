@@ -95,7 +95,6 @@ function ajax_filter_get_posts( $taxonomy ) {
     die('Permission denied');
 
   $taxonomy = $_POST['taxonomy'];
-
   // WP Query
   $args = array(
       'tag' => $taxonomy,
@@ -111,9 +110,32 @@ function ajax_filter_get_posts( $taxonomy ) {
   $query = new WP_Query( $args );
 
   if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+    <article class="hentry post-item" id="post-<?php the_ID() ?>">
+      <div class="entry-thumb">
+        <?php the_post_thumbnail(); ?>
+      </div>
+      <div class="post-content">
+        <header class="entry-header">
+          <h4 class="entry-title">
+            <a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
+            <span><?php the_date()?></span>
 
-    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <?php the_excerpt(); ?>
+          </h4>
+        </header>
+        <div class="entry-content">
+          <?php the_excerpt(); ?>
+          <?php
+          $posttags = get_the_tags();
+          if ($posttags) {
+            foreach($posttags as $tag) {
+              echo $tag->name . ' ';
+            }
+          }
+          ?>
+          <a class="cta-page-publications" href="<?php the_permalink(); ?>" >Lire la publication </a>
+        </div>
+      </div>
+    </article>
 
   <?php endwhile; ?>
   <?php else: ?>

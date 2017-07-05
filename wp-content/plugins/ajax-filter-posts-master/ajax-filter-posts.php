@@ -5,8 +5,7 @@ Description: Filter posts by taxonomy with ajax, css based on bootsrap but do wh
 Version:     1.1
 Author:      Marie Comet
 */
-class Ajax_Filter_Posts {
-
+class Ajax_Filter_Posts{
 	public function __construct(){
 		add_action('plugins_loaded', array($this, 'init'), 2);
 	}
@@ -19,7 +18,6 @@ class Ajax_Filter_Posts {
 	}
 
 	//EnqueueScripts
-
 	public function enqueue_genre_ajax_scripts() {
 	    wp_register_script( 'genre-ajax-js', plugin_dir_url(__FILE__). 'genre.js', array( 'jquery' ), '', true );
 	    wp_localize_script( 'genre-ajax-js', 'ajax_genre_params', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
