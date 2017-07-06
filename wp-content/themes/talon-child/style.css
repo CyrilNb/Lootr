@@ -70,13 +70,32 @@ html body #genre-filter {
 /* fin modification filtre plugin page publication */
 
 /* page publications */
+
+#genre-filter a.btn.btn-large {
+    color: #FAFBFF!important;
+}
+#genre-filter a.btn.btn-large.selected {
+    color: #a51220!important;
+}
+
+.tagged-posts article.post-item {
+    float: left;
+}
+
 .post-item .entry-thumb {
     border-radius: 0;
     width: 39%;
+    float: left;
 }
 
-.has-post-thumbnail.post-item .post-content {
+.post-item .post-content {
     width: 58%;
+    float: right;
+}
+
+.post-item .entry-thumb img{
+    width: 100%;
+    height: 246px;
 }
 
 .post-item .post-content .entry-title {
@@ -239,7 +258,7 @@ html body #genre-filter {
 
 .accueil-publications .home-blog-img img {
     width: 100%;
-    max-height: 280px;
+    max-height: 200px;
 }
 
 
@@ -286,7 +305,7 @@ html body #genre-filter {
 
 .page-accueil .pt-cv-meta-fields .entry-date {
     position: absolute ;
-    top: 148px;
+    top: 162px;
     left: 25px;
     background: #161515;
     padding: 2px 5px 2px 5px;
@@ -300,7 +319,7 @@ html body #genre-filter {
 
 .page-accueil .pt-cv-meta-fields .terms a {
     position: relative;
-    top: -310px;
+    top: -343px;
     float: left;
     display: inline-block;
     width: 80px!important;
@@ -387,7 +406,7 @@ html body article.post .entry-content div.image_illustration div.image_group spa
 html body nav.post-navigation { display: none; }
 
 /*Suggestions*/
-html body main#main article { margin: 0px; }
+html body main#main article.post { margin: 0px; }
 
 html body article div#suggestions_posts {
     padding-top: 20px;
