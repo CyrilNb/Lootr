@@ -20,7 +20,7 @@
 				<div class="col-md-10">
 					<ul>
 						<li><a href="<?php echo esc_url( home_url( '/mentions-legales' ) ); ?>" rel="mentionslegales" title="Mentions légales">Mentions Légales</a></li>
-						<li><a href="<?php echo esc_url( home_url( '/plan-du-site' ) ); ?>" rel="plandusite" title="Plan du site">Plan du site</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/l-equipe' ) ); ?>" rel="lequipe" title="L'équipe">L'équipe</a></li>
 					</ul>
 				</div>
 				<div class="col-md-2">
