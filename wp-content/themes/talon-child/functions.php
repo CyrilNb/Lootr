@@ -1,5 +1,59 @@
 <?php
 
+function tinymce_filtre($in){
+  /* ##### Pour le menu Styles */
+  $in['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4; Lorem=div; Ipsum=div.plop; Dolor=div#flip;';
+  /* ##### Pour le menu Formats, par exemple */
+  /* ##### Voir codex https://codex.wordpress.org/TinyMCE_Custom_Styles ##### */
+  $style_formats = array (
+      array( 'title' => 'Italique et gras', 'inline' => 'span', 'styles' => array('fontStyle' => 'italic','fontWeight' => 'bold')),
+      array( 'title' => 'Paragraphe', 'block' => 'p'),
+      array( 'title' => 'Titre', 'block' => 'h2'),
+      array( 'title' => 'Sous-titre', 'block' => 'h3'),
+      array( 'title' => 'Tarif', 'inline' => 'span', 'classes' => 'tarif'),
+      array( 'title' => 'Code', 'block' => 'pre', 'wrapper' => true),
+      array( 'title' => 'Bouton', 'selector' => 'a', 'classes' => 'bouton' ),
+      array( 'title' => 'Cadre', 'block' => 'div', 'wrapper' => true, 'classes' => 'cadre' )
+  );
+  $in['style_formats'] = json_encode( $style_formats );
+  $in['style_formats_merge'] = false;
+  /* ##### Pour la palette des couleurs */
+  $custom_colours = '
+  "171414", "noirgris", "fbfbed", "fauxblanc", "a51220", "Rouge", "ffffff", "Blanc", "000000", "Noir"  ';
+  $in['textcolor_map'] = '['.$custom_colours.']';
+  /* ##### A garder dans tous les cas */
+  return $in;
+}
+add_filter('tiny_mce_before_init', 'tinymce_filtre');
+
+
+
+/* seconde partie du test */
+/*-- --*/
+function myextensionTinyMCE($init) {
+  // Command separated string of extended elements
+  $ext = 'a[accesskey|charset|class|contenteditable|contextmenu|coords|dir|download|draggable|dropzone|hidden|href|hreflang|id|lang|media|name|rel|rev|shape|spellcheck|style|tabindex|target|title|translate|type|onclick|onfocus|onblur]';
+  // Add to extended_valid_elements if it alreay exists
+  if ( isset( $init['extended_valid_elements'] ) ) { $init['extended_valid_elements'] .= ',' . $ext; }
+  else { $init['extended_valid_elements'] = $ext; }
+  // Super important: return $init!
+  return $init; }
+add_filter('tiny_mce_before_init', 'myextensionTinyMCE' );
+function override_mce_options($initArray) {
+  $opts = '*[*]';
+  $initArray['valid_elements'] = $opts;
+  $initArray['extended_valid_elements'] = $opts;
+  return $initArray; }
+add_filter('tiny_mce_before_init', 'override_mce_options');
+
+
+?>
+
+
+<!-- Fin de la surcharge du wysiwyg -->
+
+<?php
+
 add_theme_support( 'post-thumbnails' );
 
 /**
