@@ -61,7 +61,8 @@ get_header(); ?>
 									if ($posttags) {
 										?><div class="entry-tag"><?php
 										foreach($posttags as $tag) {
-											?><span><?php $tag->name . ' ';?></span><?php
+											?><span> TAG 1 </span><?php
+											?><span> TAG 2</span><?php
 										}
 									}
 									?>
