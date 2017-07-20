@@ -32,7 +32,6 @@ get_header(); ?>
 						$term_link = get_term_link( $term, $tax );
 						echo '<a href="' . $term_link . '" class="tax-filter btn btn-large" title="' . $term->slug . '">' . $term->name . '</a> ';
 						} ?>
-					<a
 					</span>
 				</div>
 
@@ -44,18 +43,15 @@ get_header(); ?>
 				</div>
 				<div class="tagged-posts">
 					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-
 						<article class="hentry post-item" id="post-<?php the_ID() ?>">
-
-							<div class="entry-thumb">
-								<?php the_post_thumbnail(); ?>
+							<div class="entry-thumb">)
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?> </a>
 							</div>
 							<div class="post-content">
 								<header class="entry-header">
 								<h4 class="entry-title">
 									<a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
 									<span><?php the_date()?></span>
-
 								</h4>
 								</header>
 								<div class="entry-content">
@@ -63,8 +59,9 @@ get_header(); ?>
 									<?php
 									$posttags = get_the_tags();
 									if ($posttags) {
+										?><div class="entry-tag"><?php
 										foreach($posttags as $tag) {
-											echo $tag->name . ' ';
+											?><span><?php $tag->name . ' ';?></span><?php
 										}
 									}
 									?>
