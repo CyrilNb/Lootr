@@ -102,6 +102,10 @@ html body #genre-filter {
     margin-top: -4px;
     text-transform: uppercase;
     font-weight: 900;
+    color : #161515;
+}
+.post-item .post-content .entry-title a:hover {
+    color : #161515!important;
 }
 
 .post-content .entry-header {
@@ -286,6 +290,12 @@ html body #genre-filter {
 }
 .page-accueil .pt-cv-ifield h4 {
     float: left;
+}
+.page-accueil .pt-cv-ifield .pt-cv-title a{
+    color: #161515;
+    text-transform: uppercase;
+    font-family: 'open sans';
+    font-weight: 600;
 }
 .page-accueil .pt-cv-content {
     float: left;
