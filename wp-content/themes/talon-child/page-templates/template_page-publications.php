@@ -44,14 +44,14 @@ get_header(); ?>
 				<div class="tagged-posts">
 					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 						<article class="hentry post-item" id="post-<?php the_ID() ?>">
-							<div class="entry-thumb">)
+							<div class="entry-thumb">
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?> </a>
 							</div>
 							<div class="post-content">
 								<header class="entry-header">
 								<h4 class="entry-title">
-									<a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
-									<span><?php the_date()?></span>
+									<a class="entry-link" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
+									<span class="entry-date"><?php the_date()?></span>
 								</h4>
 								</header>
 								<div class="entry-content">
