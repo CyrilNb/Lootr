@@ -113,10 +113,14 @@ html body #genre-filter {
     margin-bottom: 25px;
 }
 
-.post-content .entry-header .cat-links {
+.post-content .entry-content p {
+    height: 144px;
+}
+
+.post-content .entry-header .entry-date {
     position: absolute;
-    margin-left: -477px;
-    margin-top: -15px;
+    margin-left: -480px;
+    margin-top: -5px;
     color: #fafbff;
     background-color: #161515;
     padding-left: 4px;
@@ -127,10 +131,10 @@ html body #genre-filter {
     color: #fafbff;
 }
 
-.post-content .entry-header .posted-on {
+.post-content .entry-content .entry-tag {
     position: absolute;
     margin-left: -477px;
-    margin-top: 192px;
+    margin-top: 0px;
     color: #fafbff;
     background-color: #161515;
     padding-left: 4px;
