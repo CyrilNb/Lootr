@@ -51,19 +51,21 @@ get_header(); ?>
 								<header class="entry-header">
 								<h4 class="entry-title">
 									<a class="entry-link" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
-									<span class="entry-date"><?php the_date()?></span>
 								</h4>
+								<span class="entry-date"><?php the_date()?></span>
 								</header>
 								<div class="entry-content">
 									<?php the_excerpt(); ?>
-									<?php
-									$posttags = get_the_tags();
-									if ($posttags) {
-										foreach($posttags as $tag) {
-											echo $tag->name . ' ';
+									<div class="entry-tag">
+										<?php
+										$posttags = get_the_tags();
+										if ($posttags) {
+											foreach($posttags as $tag) {
+												echo '<span class="tag-value">' . $tag->name . '</span>';
+											}
 										}
-									}
-									?>
+										?>
+									</div>
 									<a class="cta-page-publications" href="<?php the_permalink(); ?>" >Lire la publication </a>
 								</div>
 							</div>

@@ -171,21 +171,22 @@ function ajax_filter_get_posts( $taxonomy ) {
       <div class="post-content">
         <header class="entry-header">
           <h4 class="entry-title">
-            <a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
-            <span><?php the_date()?></span>
-
+            <a class="entry-link" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
           </h4>
+          <span><?php the_date()?></span>
         </header>
         <div class="entry-content">
           <?php the_excerpt(); ?>
+          <div class="entry-tag">
           <?php
           $posttags = get_the_tags();
           if ($posttags) {
             foreach($posttags as $tag) {
-              echo $tag->name . ' ';
+              echo '<span class="tag-value">' . $tag->name . '</span>';
             }
           }
           ?>
+          </div>
           <a class="cta-page-publications" href="<?php the_permalink(); ?>" >Lire la publication </a>
         </div>
       </div>
