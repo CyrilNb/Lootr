@@ -1,6 +1,9 @@
 jQuery(document).ready(function($) {
     $('.tax-filter').click( function(event) {
 
+        //Remove all selected class
+        $('.selected').removeClass('selected');
+
 		// Prevent default action - opening tag page
 		if (event.preventDefault) {
 			event.preventDefault();
@@ -12,6 +15,7 @@ jQuery(document).ready(function($) {
 		var selected_taxonomy = $(this).attr('title');
 
 		$('.tagged-posts').fadeOut();
+
 
 		data = {
 			action: 'filter_posts',

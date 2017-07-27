@@ -31,7 +31,7 @@ get_header(); ?>
 					foreach ( $terms as $term ) {
 						$term_link = get_term_link( $term, $tax );
 						echo '<a href="' . $term_link . '" class="tax-filter btn btn-large" title="' . $term->slug . '">' . $term->name . '</a> ';
-						} ?>
+					} ?>
 					</span>
 				</div>
 
@@ -59,10 +59,8 @@ get_header(); ?>
 									<?php
 									$posttags = get_the_tags();
 									if ($posttags) {
-										?><div class="entry-tag"><?php
 										foreach($posttags as $tag) {
-											?><span> TAG 1 </span><?php
-											?><span> TAG 2</span><?php
+											echo $tag->name . ' ';
 										}
 									}
 									?>
