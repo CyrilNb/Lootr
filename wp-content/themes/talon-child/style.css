@@ -384,6 +384,7 @@ html body .post header.entry-header .entry-meta {
 
 html body header.entry-header .entry-meta .cat-links, html body header.entry-header .entry-meta .tags-links a {
     padding: 3px 6px;
+    margin-right: 15px; /* correctif pour alignement sur la droite */
     border-radius: 0;
     background: #171414;
     color: #fbfbed; }
@@ -470,6 +471,7 @@ html body article div#suggestions_posts .pt-cv-wrapper .pt-cv-page a.pt-cv-href-
 html body article div#suggestions_posts .pt-cv-wrapper .pt-cv-page a.pt-cv-href-thumbnail:hover img { transform: scale(1.1); }
 
 html body article div#suggestions_posts .pt-cv-wrapper .pt-cv-content {
+    height: 157px; /* on fixe la hauteur pour garder un même positionnement sur les blocs relais */
     margin: 0;
     font-weight: lighter;
     line-height: normal; }
@@ -481,6 +483,8 @@ html body article div#suggestions_posts .pt-cv-wrapper a.btn-success {
     color: #a51220;
     font-weight: bold;
     text-transform: uppercase;
+    position: absolute;
+    bottom: 18px;
     width: 235px; }
 
 html body article div#suggestions_posts .pt-cv-wrapper a.btn-success:hover {
@@ -577,4 +581,8 @@ html #footer-menu ul.footer_right  { text-align: right; }
 html #footer-menu ul.footer_right li { float:inherit; }
 
 html #footer-menu ul li a { color:#ffffff; }
-html #footer-menu ul li a:hover { color:#a51220; }
+html #footer-menu ul li a:hover, html #footer-menu ul li a:active { color:#a51220; }
+
+/* Pour les effets de pages actives, il faut passer par un appel de fonction sur le menu */
+
+/*-------------------- test BO wysiwyg --------------------*/
